@@ -2,7 +2,8 @@
 <h3>AI & Full Stack Engineer | Vibe Coder</h3>
 A professional portfolio showcasing my expertise in Generative AI, Full Stack Development, and DevOps, with a focus on building impactful, production-ready solutions.
 
-**View my live portfolio here.**
+
+***View my live portfolio: https://portfolio-two-amber-95.vercel.app/***
 
 **What's Inside?**
 This portfolio is a single-page application built to be fast, responsive, and easy to navigate. It includes a professional summary, a dynamic display of my core technical stack, and detailed case studies of my major projects with live demos. Additionally, you'll find a section dedicated to my articles on AI, DevOps, and engineering topics.
