@@ -19,8 +19,8 @@ To run this project locally, simply clone the repository and open index.html in 
 **Let's Connect**
 I'm always open to discussing new opportunities or collaborating on interesting projects.
 
-LinkedIn: linkedin.com/in/surya-pranav-perumalla-266311367
+LinkedIn: [linkedin.com/in/surya-pranav-perumalla-266311367](linkedin.com/in/surya-pranav-perumalla-266311367)
 
-GitHub: github.com/surya-p7
+GitHub: [https://github.com/surya-p7](https://github.com/surya-p7)
 
 Email: suryapranavperumalla@gmail.com
