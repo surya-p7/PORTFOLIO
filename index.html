@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -231,23 +231,12 @@
             </ul>
             <!-- Mobile Menu Toggle Button -->
             <div class="flex items-center space-x-2 md:hidden">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </button>
                 <button id="mobile-menu-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
             </div>
-            <!-- Desktop Theme Toggle -->
-            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 hidden md:block">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </button>
             </nav>
         </header>
     
@@ -343,11 +332,7 @@
                                 <p class="text-sm text-gray-500 dark:text-gray-400">May 2025 - Aug 2025</p>
                                 <p class="mt-2">Delivered applied AI/ML solutions and automation pipelines that enhanced project efficiency and streamlined backend processes.</p>
                             </div>
-                            <div class="timeline-item pl-8">
-                                <h4 class="font-semibold text-lg">B.Tech in CSE(DS)</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Vignan Institute of Technology and Science</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">2022 - Present</p>
-                            </div>
+
                             <div class="timeline-item pl-8">
                                 <h4 class="font-semibold text-lg">Technical Mentorship Volunteering</h4>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Geeks for Geeks Student chapter</p>
@@ -664,25 +649,9 @@
         </footer>
         
         <script>
-            // Dark Mode Toggle Logic
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-            const body = document.body;
-    
-            const toggleTheme = () => {
-                body.classList.toggle('dark');
-                localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
-            };
-    
-            themeToggle.addEventListener('click', toggleTheme);
-            themeToggleMobile.addEventListener('click', toggleTheme);
-    
-            // Check for saved theme preference
-            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                body.classList.add('dark');
-            } else {
-                body.classList.remove('dark');
-            }
+            // Force dark mode
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
     
             // Mobile Menu Logic
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
