@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURYA PRANAV PERUMALLA's Portfolio</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Portfolio of Suryapranav P. – AI/ML Engineer & Full-Stack Developer | Turning Ideas into Intelligent, Scalable Products">
+    <meta name="keywords" content="AI, Full Stack, GenAI, Software Engineer, DevOps, Portfolio">
+    <meta name="author" content="Suryapranav P.">
+    <meta property="og:title" content="Suryapranav's Portfolio" />
+    <meta property="og:description" content="AI/ML Engineer & Full-Stack Developer | Turning Ideas into Intelligent, Scalable Products" />
+    <meta property="og:image" content="https://placehold.co/1200x630/c5c5c5/333333?text=Suryapranav's+Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='60%' font-size='60' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' fill='%2314b8a6'%3ES%3C/text%3E%3Ctext x='50%' y='85%' font-size='60' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' fill='%232dd4bf'%3EP%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .cedarville-cursive-regular {
+            font-family: "Cedarville Cursive", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .parisienne-regular {
+            font-family: "Parisienne", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            color: #1f2937;
+            background-image: radial-gradient(at 50% 0%, #d8e3f2, #f0f4f8);
+        }
+        
+        body.dark {
+            background-color: #1a202c; /* Deep charcoal background */
+            color: #e2e8f0;
+            background-image: radial-gradient(at 50% 0%, #2d3748, #1a202c);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #2dd4bf; /* Teal accent */
+            border-radius: 9999px;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        body.dark .card {
+            background-color: #2d3748; /* Darker gray card background */
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.08);
+        }
+        
+        body.dark .card:hover {
+            box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1), 0 4px 6px rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #14b8a6, #2dd4bf); /* Teal gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .active-link {
+            position: relative;
+            font-weight: 600;
+        }
+
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2dd4bf; /* Teal accent */
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -16px;
+            height: 100%;
+            width: 2px;
+            background-color: #cbd5e1; /* Light gray line */
+        }
+        
+        body.dark .timeline-item::before {
+            background-color: #4a5568; /* Darker gray line */
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            background-color: #2dd4bf; /* Teal circle */
+            border-radius: 9999px;
+        }
+
+        #typewriter-text {
+            border-right: 2px solid;
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #2dd4bf; }
+        }
+
+        .skill-card {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem; /* space-x-3 equivalent */
+            background-color: #2d3748; /* Darker gray background */
+            border-radius: 0.75rem; /* rounded-xl equivalent */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+        
+        .skill-card:hover {
+            transform: scale(1.05);
+            background-color: #414a58;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-icon {
+            filter: drop-shadow(0 0 5px #2dd4bf);
+        }
+
+        .glowing-card {
+            position: relative;
+            background: rgba(45, 55, 72, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .glowing-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 1px;
+            background: linear-gradient(45deg, #14b8a6, #2dd4bf, #2dd4bf, #14b8a6);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        .parisienne-regular {
+            font-family: "Parisienne", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .header-name {
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .header-name {
+                font-size: 1.875rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Modern Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-600 bg-clip-text text-transparent">
+                        SP
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        Home
+                    </a>
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        About
+                    </a>
+                    <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        Education
+                    </a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        Skills
+                    </a>
+                    <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        Projects
+                    </a>
+                    <a href="#blog" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 nav-link">
+                        Blog
+                    </a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 transition-all duration-200">
+                        Contact Me
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none transition-colors duration-200">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    Home
+                </a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    About
+                </a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    Education
+                </a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    Skills
+                </a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    Projects
+                </a>
+                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 mobile-nav-link">
+                    Blog & Articles
+                </a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 transition-all duration-200 text-center">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </header>
+    
+        <main class="max-w-7xl mx-auto px-6 md:px-8 space-y-24 py-16">
+    
+        <!-- Hero Section -->
+    <section id="home" class="py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600 mb-6">
+                        <span class="cedarville-cursive-regular text-5xl md:text-7xl">Surya Pranav Perumalla</span>
+                    </h1>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-center">
+                            Get In Touch
+                        </a>
+                        <a href="SURYAPRANAV_AIML.pdf" target="_blank" class="px-8 py-4 border-2 border-teal-500 text-teal-500 dark:text-teal-400 font-semibold rounded-full hover:bg-teal-50 dark:hover:bg-gray-800 transition-colors duration-300 text-center">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 w-64 h-64 md:w-80 md:h-80 mx-auto md:ml-auto">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div class="relative z-10 w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                            <img src="SURYA.png" alt="Surya Pranav Perumalla" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 md:w-40 md:h-40 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 md:w-40 md:h-40 bg-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+            <!-- About Section -->
+            <section id="about" class="py-20 bg-white dark:bg-gray-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 mx-auto"></div>
+                    </div>
+                    
+                    <div class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-center mb-16">
+                        <p class="mb-6">
+                            I'm <span class="font-semibold text-teal-500">Surya Pranav Perumalla</span>, specializing in Machine Learning and MLOps. My journey began when the release of ChatGPT coincided with the start of my B.Tech — sparking a deep curiosity about how AI models learn, reason, and interact.
+                        </p>
+                        <p>
+                            From image captioning models to document summarization pipelines, I've worked on projects that combine ML, DevOps, and full-stack development — turning prototypes into production-ready systems. My core focus is creating end-to-end intelligent pipelines that make AI usable, reliable, and impactful.
+                        </p>
+                    </div>
+                
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Key Achievements -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Key Achievements
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start space-x-4 group">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">70% Faster Analysis</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Reduced RFP analysis time with AI-powered summarization</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-4 group">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">30% Faster Deployments</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Optimized CI/CD pipelines with Docker</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-4 group">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-teal-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">25% Efficiency Gain</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Enhanced project workflows with AI/ML solutions</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!-- Experience Timeline -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Professional Journey
+                        </h3>
+                        <div class="space-y-8 relative">
+                            <!-- Vertical line -->
+                            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-teal-200 dark:bg-gray-600"></div>
+                            
+                            <!-- Timeline Item 1 -->
+                            <div class="relative pl-12 group">
+                                <div class="absolute left-0 w-4 h-4 rounded-full bg-teal-500 border-4 border-white dark:border-gray-800 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                                <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white">Intern, L&T Technology Services</h4>
+                                        <span class="text-sm px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 rounded-full">2025</span>
+                                    </div>
+                                    <p class="text-sm text-teal-600 dark:text-teal-400 mb-2">May 2025 - Aug 2025</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Delivered applied AI/ML solutions and automation pipelines that enhanced project efficiency and streamlined backend processes.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 2 -->
+                            <div class="relative pl-12 group">
+                                <div class="absolute left-0 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white dark:border-gray-800 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                                <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white">Technical Mentor</h4>
+                                    <p class="text-sm text-cyan-600 dark:text-cyan-400 mb-2">Geeks for Geeks Student Chapter</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Provided technical mentorship to students, guiding them on various programming and development topics.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 3 -->
+                            <div class="relative pl-12 group">
+                                <div class="absolute left-0 w-4 h-4 rounded-full bg-teal-500 border-4 border-white dark:border-gray-800 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                                <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white">Leadership Volunteer</h4>
+                                    <p class="text-sm text-teal-600 dark:text-teal-400 mb-2">AARA Learn</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Volunteered in a leadership role, helping to foster collaboration and a positive learning environment.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 4 -->
+                            <div class="relative pl-12 group">
+                                <div class="absolute left-0 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white dark:border-gray-800 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                                <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white">Theatre Artist</h4>
+                                    <p class="text-sm text-cyan-600 dark:text-cyan-400 mb-2">Govad Creations</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Performed in theatre productions and contributed to creative projects recognized by the Ministry of Culture, Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section id="education" class="py-20 bg-gray-50 dark:bg-gray-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-500 mx-auto"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <!-- Education Card 1 -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-start space-x-4 mb-6">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Vignan Institute of Technology and Science</h3>
+                                    <span class="inline-block mt-1 px-3 py-1 text-xs font-semibold bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200 rounded-full">2021 - 2025</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">Bachelor of Technology in <span class="font-medium text-gray-800 dark:text-gray-100">Computer Science and Engineering (Data Science)</span></p>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">Hyderabad, Telangana, India</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">CGPA: <span class="font-medium text-gray-800 dark:text-gray-100">9.2/10.0</span> (Expected)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Card 2 - Add another education entry if needed -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-start space-x-4 mb-6">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-50 dark:bg-cyan-900/30 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Higher Secondary Education</h3>
+                                    <span class="inline-block mt-1 px-3 py-1 text-xs font-semibold bg-cyan-100 dark:bg-cyan-900/50 text-cyan-800 dark:text-cyan-200 rounded-full">2019 - 2021</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">Board of Intermediate Education, <span class="font-medium text-gray-800 dark:text-gray-100">MPC (Mathematics, Physics, Chemistry)</span></p>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">Hyderabad, Telangana, India</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <p class="text-gray-600 dark:text-gray-300">Percentage: <span class="font-medium text-gray-800 dark:text-gray-100">97.5%</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="py-20 bg-white dark:bg-gray-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">My Skills</h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-500 mx-auto"></div>
+                        <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Here are the technologies and tools I work with to build amazing things
+                        </p>
+                    </div>
+
+                    <!-- Skills Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <!-- AI/ML & GenAI -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700 h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI/ML & GenAI</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:python.svg" class="w-6 h-6" alt="Python">
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Python</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:pytorch-icon.svg" class="w-6 h-6" alt="PyTorch">
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">PyTorch</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:tensorflow.svg" class="w-6 h-6" alt="TensorFlow">
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">TensorFlow</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/simple-icons:scikitlearn.svg" class="w-6 h-6" style="color: #F7931E;" alt="Scikit-learn">
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Scikit-learn</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">NLP</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Computer Vision</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Generative AI</span>
+                                    </div>
+                                </div>
+                                <!-- Web Development -->
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Web Development</span>
+                                    </div>
+                                </div>
+
+                                <!-- Cloud & DevOps -->
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Cloud & DevOps</span>
+                                    </div>
+                                </div>
+
+                                <!-- Database -->
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Database</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tools & Platforms -->
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">Tools & Platforms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web Development Category -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700 h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Web Development</h3>
+                            </div>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:react.svg" class="w-5 h-5" alt="React">
+                                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">React</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:nextjs-icon.svg" class="w-5 h-5 dark:invert" alt="Next.js">
+                                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Next.js</span>
+                                    </div>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                    <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                        <img src="https://api.iconify.design/logos:tailwindcss-icon.svg" class="w-5 h-5" alt="Tailwind CSS">
+                                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Tailwind CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cloud & DevOps -->
+                            <div class="mt-6">
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Cloud & DevOps</h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:docker-icon.svg" class="w-5 h-5" alt="Docker">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Docker</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:kubernetes.svg" class="w-5 h-5" alt="Kubernetes">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Kubernetes</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:google-cloud.svg" class="w-5 h-5" alt="Google Cloud">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Google Cloud</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Database -->
+                            <div class="mt-6">
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Database</h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:postgresql.svg" class="w-5 h-5" alt="PostgreSQL">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">PostgreSQL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:mongodb-icon.svg" class="w-5 h-5" alt="MongoDB">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">MongoDB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tools & Platforms -->
+                            <div class="mt-6">
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tools & Platforms</h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:visual-studio-code.svg" class="w-5 h-5" alt="VS Code">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">VS Code</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:git-icon.svg" class="w-5 h-5" alt="Git">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Git</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="group relative">
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200 group-hover:duration-200"></div>
+                                        <div class="relative px-4 py-2.5 bg-white dark:bg-gray-800 rounded-lg flex items-center space-x-2 border border-gray-100 dark:border-gray-700 group-hover:border-transparent transition-colors duration-200">
+                                            <img src="https://api.iconify.design/logos:github-icon.svg" class="w-5 h-5" alt="GitHub">
+                                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">GitHub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                    </div>
+
+                </div>
+            </section>
+        
+            
+                <!-- Projects Section -->
+                <section id="projects" class="opacity-0">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 section-title mb-16">Projects</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project Card 1: AI Image Caption Generator -->
+                        <div class="bg-white dark:bg-gray-800 card p-6 rounded-xl flex flex-col">
+                            <img src="AI_IMAGE_CAPTION.png" alt="AI Image Caption Generator" class="rounded-lg mb-4" loading="lazy">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">AI Image Caption Generator</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">A full-stack GenAI app that generates context-aware captions for uploaded images using Google’s Gemini Vision Pro. Built with Python, it supports multilingual output and customizable model parameters. Reduced manual captioning effort by 80% for test users</p>
+                            <div class="flex flex-wrap gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1"><img src="https://api.iconify.design/logos:react.svg" class="w-4 h-4" alt="React"> React</span>
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1"><img src="https://api.iconify.design/logos:python.svg" class="w-4 h-4" alt="Python"> Python</span>
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-teal-500">
+                                        <path d="M12 8V4H8"/>
+                                        <rect width="16" height="12" x="4" y="8" rx="2"/>
+                                        <path d="M2 14h2"/>
+                                        <path d="M20 14h2"/>
+                                        <path d="M15 13v2"/>
+                                        <path d="M9 13v2"/>
+                                    </svg>
+                                    <span>GenAI</span>
+                                </span>
+                            </div>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="https://image-caption-app-ftp0.onrender.com" class="text-gradient hover:text-teal-700 font-semibold transition-colors duration-300">🔗 Live Demo</a>
+                                <a href="https://github.com/surya-p7/image_caption_backup" class="text-gray-600 dark:text-gray-300 font-semibold hover:text-teal-500 transition-colors duration-300">💻 GitHub</a>
+                            </div>
+                        </div>
+        
+                        <!-- Project Card 2: RFP Analyzer -->
+                        <div class="bg-white dark:bg-gray-800 card p-6 rounded-xl flex flex-col">
+                            <img src="RFP.png" alt="RFP Analyzer UI" class="rounded-lg mb-4" loading="lazy">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">RFP Analyzer</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">An AI-powered document intelligence tool that automates RFP analysis with IBM Granite LLM, FAISS search, and OCR pipelines. Cuts review time by 70% and delivers grounded, query-based insights in seconds. Deployed with Docker and optimized CI/CD pipelines.</p>
+                            <div class="flex flex-wrap gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1"><img src="https://api.iconify.design/logos:python.svg" class="w-4 h-4" alt="Python"> Python</span>
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-teal-500">
+                                        <path d="M12 8V4H8"/>
+                                        <rect width="16" height="12" x="4" y="8" rx="2"/>
+                                        <path d="M2 14h2"/>
+                                        <path d="M20 14h2"/>
+                                        <path d="M15 13v2"/>
+                                        <path d="M9 13v2"/>
+                                    </svg>
+                                    <span>GenAI</span>
+                                </span>
+                                <span class="bg-gray-200 dark:bg-gray-700 py-1 px-3 rounded-full flex items-center space-x-1"><img src="https://api.iconify.design/logos:docker-icon.svg" class="w-4 h-4" alt="Docker"> Docker</span>
+                            </div>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="#" class="text-gradient hover:text-teal-700 font-semibold transition-colors duration-300" onclick="showModal('Live demo coming soon!'); return false;">🔗 Live Demo</a>
+                                <a href="https://github.com/surya-p7/RFP-analyzer" target="_blank" class="text-gray-600 dark:text-gray-300 font-semibold hover:text-teal-500 transition-colors duration-300">💻 GitHub</a>
+                            </div>
+                        </div>
+        
+                        
+                    </div>
+                </section>
+        
+        
+              
+        
+                <!-- Blog & Articles Section -->
+                <section id="blog" class="opacity-0">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 section-title mb-16">Blog & Articles</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Article Card 1 -->
+                        <div class="bg-white dark:bg-gray-800 card p-6 rounded-xl">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">The Future of GenAI in Product Engineering</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A look into how large language models are changing the way we build and deploy applications, and what it means for engineers.</p>
+                            <a href="#" class="text-gradient hover:text-teal-700 font-semibold transition-colors duration-300" onclick="showModal('Article coming soon!'); return false;">Read More</a>
+                        </div>
+                        <!-- Article Card 2 -->
+                        <div class="bg-white dark:bg-gray-800 card p-6 rounded-xl">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">DevOps for AI: Best Practices for Scalable Solutions </h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">An overview of how integrating CI/CD and Docker can streamline the development and deployment of machine learning projects.</p>
+                            <a href="#" class="text-gradient hover:text-teal-700 font-semibold transition-colors duration-300" onclick="showModal('Article coming soon!'); return false;">Read More</a>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Contact Section -->
+                <section id="contact" class="text-center max-w-xl mx-auto opacity-0">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 section-title mb-16">Let's Connect</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+                        I'm open to AI, full-stack, and software engineering roles. Let’s connect to craft AI-powered, market-ready solutions that drive the future of technology.
+                    </p>
+                    <div class="flex justify-center space-x-4 mb-8">
+                        <a href="mailto:suryapranavperumalla@gmail.com" class="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition-colors duration-300 transform hover:scale-105">
+                            Say Hello
+                        </a>
+                        <a href="https://www.linkedin.com/in/surya-pranav-perumalla-266311367" target="_blank" class="border border-gray-300 dark:border-gray-600 hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900 hover:text-teal-500 text-gray-600 dark:text-gray-300 font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/surya-p7" target="_blank" class="border border-gray-300 dark:border-gray-600 hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900 hover:text-teal-500 text-gray-600 dark:text-gray-300 font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-600 dark:text-gray-300">Get in touch:</span>
+                            <a href="mailto:suryapranavperumalla@gmail.com" class="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400 font-medium transition-colors duration-300">suryapranavperumalla@gmail.com</a>
+                        </div>
+                    </div>
+                </section>
+        
+        </main>
+    
+        <!-- Sticky Contact Bar -->
+        <div class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-sm p-4 md:hidden flex justify-around border-t border-gray-200 dark:border-gray-700">
+            <a href="mailto:suryapranavperumalla@gmail.com" class="text-gray-800 dark:text-gray-200 hover:text-teal-500 transition-colors duration-300 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4"/></svg>
+                <span class="text-xs mt-1">Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/surya-pranav-perumalla-266311367" target="_blank" class="text-gray-800 dark:text-gray-200 hover:text-teal-500 transition-colors duration-300 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM4 16h4v-7H4v7z"/></svg>
+                <span class="text-xs mt-1">LinkedIn</span>
+            </a>
+            <a href="https://github.com/surya-p7" target="_blank" class="text-gray-800 dark:text-gray-200 hover:text-teal-500 transition-colors duration-300 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.22 1.5c-.5.1-2 .8-3 2.5a14 14 0 00-6 0c-1-.9-2.5-2.2-3-2.5a5.07 5.07 0 00-.78 3.27A5.44 5.44 0 002 9c0 5.4 3.3 6.6 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                <span class="text-xs mt-1">GitHub</span>
+            </a>
+        </div>
+    
+        <!-- Footer -->
+        <footer class="text-center py-6 text-gray-500 dark:text-gray-400 text-sm bg-white dark:bg-gray-900 transition-colors duration-300">
+            &copy; 2025 Perumalla Surya Pranav. All Rights Reserved.
+        </footer>
+        
+        <!-- Custom Modal for Alerts -->
+        <div id="custom-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 z-[100] flex items-center justify-center">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-sm w-full mx-4 text-center">
+                <p id="modal-message" class="text-gray-800 dark:text-gray-100 mb-4"></p>
+                <button onclick="closeModal()" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-full">OK</button>
+            </div>
+        </div>
+
+        <script>
+            // Force dark mode
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+    
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                        
+                        // Scroll to target
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without adding to history
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+            
+            // Active link highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            
+            function setActiveLink() {
+                let current = '';
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active-link');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('text-teal-500', 'dark:text-teal-400');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('text-teal-500', 'dark:text-teal-400');
+                    }
+                });
+            }
+            
+            // Set active link on load and scroll
+            window.addEventListener('load', setActiveLink);
+            window.addEventListener('scroll', setActiveLink);
+            
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections with the 'opacity-0' class
+            document.querySelectorAll('section.opacity-0').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Modal functions
+            function showModal(message) {
+                const modal = document.getElementById('custom-modal');
+                const modalMessage = document.getElementById('modal-message');
+                modalMessage.textContent = message;
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('custom-modal');
+                modal.classList.add('hidden');
+            }
+        </script>
+    
+    </body>
+    </html>
