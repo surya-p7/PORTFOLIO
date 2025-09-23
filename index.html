@@ -3,7 +3,7 @@
     <html lang="en" class="scroll-smooth dark">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
         <title>SURYA PRANAV PERUMALLA's Portfolio</title>
         
         <!-- SEO & Social Media Meta Tags -->
@@ -25,9 +25,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
+            html {
+                overflow-x: hidden;
+                width: 100%;
+            }
             body {
                 font-family: 'Inter', sans-serif;
                 background-color: #f0f4f8; /* Light gray background */
+                max-width: 100%;
+                overflow-x: hidden;
                 color: #1f2937;
                 background-image: radial-gradient(at 50% 0%, #d8e3f2, #f0f4f8);
             }
@@ -77,6 +83,7 @@
             .text-gradient {
                 background-image: linear-gradient(to right, #14b8a6, #2dd4bf); /* Teal gradient */
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
     
@@ -197,6 +204,7 @@
                 padding: 1px;
                 background: linear-gradient(45deg, #14b8a6, #2dd4bf, #2dd4bf, #14b8a6);
                 -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 -webkit-mask-composite: xor;
                 mask-composite: exclude;
                 z-index: -1;
@@ -273,7 +281,7 @@
                 <section id="home" class="flex flex-col md:flex-row items-center justify-between min-h-[80vh] pt-12 opacity-0">
                     <div class="flex-1 text-center md:text-left md:pr-12">
                         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 mb-4">
-                            Hello, I'm <span class="text-gradient whitespace-nowrap">SURYA PRANAV PERUMALLA</span>
+                            Hello, I'm <span class="text-gradient">SURYA PRANAV PERUMALLA</span>
                         </h1>
                         <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2">
                             <span id="typewriter-text"></span>
